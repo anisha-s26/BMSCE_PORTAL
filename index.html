@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMSCE Portal | Engineering Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Animation for the Mega Menu */
+        .group:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0) scale(1);
+        }
+        
+        /* Navigation background transition */
+        .nav-scrolled {
+            background-color: white !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .nav-scrolled #navLogo, 
+        .nav-scrolled .nav-link {
+            color: #003366 !important;
+        }
+
+        /* Ensure nav items align properly for the menu trigger */
+        .hidden.lg\:flex {
+            height: 80px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 h-20 flex items-center bg-transparent" id="mainNav">
+        <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="bmslogo.jpeg" class="h-10">
+                    BMSCE <span class="text-[#C5A059]">PORTAL</span>
+                </h1>
+            </div>
+            
+            <div class="hidden lg:flex items-center h-full gap-8 font-bold text-[10px] uppercase tracking-[0.2em] text-white/80">
+                <a href="#home" class="nav-link hover:text-white transition-colors">Home</a>
+                <a href="about.html" class="nav-link hover:text-white transition-colors">About</a>
+                <a href="#departments" class="nav-link hover:text-white transition-colors">Departments</a>
+                
+                <div class="relative group h-full flex items-center">
+                    <button class="nav-link hover:text-white transition-colors flex items-center gap-1 cursor-default py-8 uppercase">
+                        Academics <i data-lucide="chevron-down" size="14"></i>
+                    </button>
+
+                    <div class="mega-menu absolute top-[80px] left-1/2 -translate-x-1/2 w-[900px] bg-white shadow-2xl rounded-2xl border-t-4 border-[#C5A059] opacity-0 invisible transition-all duration-300 transform origin-top scale-95 flex overflow-hidden text-slate-900 normal-case tracking-normal">
+                        <div class="flex-1 p-8 border-r border-slate-100">
+                            <h3 class="text-[#003366] font-black text-xs uppercase tracking-widest mb-6">Undergraduate</h3>
+                            <ul class="space-y-4">
+                                <li><a href="#" class="block text-sm font-bold text-slate-600 hover:text-[#C5A059] transition-all">Computer Science & Engineering</a></li>
+                                <li><a href="#" class="block text-sm font-bold text-slate-600 hover:text-[#C5A059] transition-all">CSE – AI & ML</a></li>
+                                <li><a href="#" class="block text-sm font-bold text-slate-600 hover:text-[#C5A059] transition-all">Information Science & Engg</a></li>
+                                <li><a href="#" class="block text-sm font-bold text-slate-600 hover:text-[#C5A059] transition-all">Electronics & Comm. Engg</a></li>
+                                <li><a href="#" class="block text-sm font-bold text-slate-600 hover:text-[#C5A059] transition-all">Mechanical Engineering</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="flex-1 p-8 bg-slate-50">
+                            <h3 class="text-[#003366] font-black text-xs uppercase tracking-widest mb-6">Postgraduate</h3>
+                            <ul class="space-y-4 mb-8">
+                                <li><a href="#" class="block text-sm font-bold text-slate-600 hover:text-[#C5A059] transition-all">MBA - Management</a></li>
+                                <li><a href="#" class="block text-sm font-bold text-slate-600 hover:text-[#C5A059] transition-all">MCA - Applications</a></li>
+                            </ul>
+                            <h3 class="text-[#003366] font-black text-xs uppercase tracking-widest mb-4">Research</h3>
+                            <ul class="space-y-4">
+                                <li><a href="#" class="block text-sm font-bold text-slate-600 hover:text-[#C5A059] transition-all">PhD Programmes</a></li>
+                                <li><a href="#" class="block text-sm font-bold text-slate-600 hover:text-[#C5A059] transition-all">Innovation Labs</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="w-72 bg-[#003366] p-8 text-white flex flex-col justify-between relative overflow-hidden">
+                            <div class="relative z-10">
+                                <h4 class="text-xl font-black mb-2 leading-tight">Your Path to Success</h4>
+                                <p class="text-xs text-blue-200 opacity-80 leading-relaxed">Join a legacy of excellence spanning 7+ decades in technical education.</p>
+                            </div>
+                            <button class="relative z-10 bg-[#C5A059] text-white font-bold py-3 rounded-xl shadow-lg hover:scale-105 transition-all text-xs">
+                                APPLY FOR 2026
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="placement.html" class="nav-link hover:text-white transition-colors">Placements</a>
+                <a href="#research" class="nav-link hover:text-white transition-colors">Research</a>
+                <div class="relative group h-full flex items-center">
+    <button class="nav-link hover:text-white transition-colors flex items-center gap-1 cursor-default py-8 uppercase">
+        Campus Life <i data-lucide="chevron-down" size="14"></i>
+    </button>
+
+    <div class="absolute top-[80px] left-1/2 -translate-x-1/2 w-64 bg-white shadow-2xl rounded-2xl border-t-4 border-[#C5A059] opacity-0 invisible transition-all duration-300 transform origin-top scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100 text-slate-900 normal-case tracking-normal p-4">
+        <div class="space-y-2">
+            <a href="campus.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-all group/item">
+                <div class="bg-blue-50 text-[#003366] p-2 rounded-lg group-hover/item:bg-[#003366] group-hover/item:text-white transition-colors">
+                    <i data-lucide="map-pin" size="16"></i>
+                </div>
+                <span class="text-sm font-bold text-slate-700">Campus Overview</span>
+            </a>
+            
+            <a href="facilities.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-all group/item">
+                <div class="bg-blue-50 text-[#003366] p-2 rounded-lg group-hover/item:bg-[#003366] group-hover/item:text-white transition-colors">
+                    <i data-lucide="building-2" size="16"></i>
+                </div>
+                <span class="text-sm font-bold text-slate-700">Facilities</span>
+            </a>
+
+            <a href="gallery.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-all group/item">
+                <div class="bg-blue-50 text-[#003366] p-2 rounded-lg group-hover/item:bg-[#003366] group-hover/item:text-white transition-colors">
+                    <i data-lucide="image" size="16"></i>
+                </div>
+                <span class="text-sm font-bold text-slate-700">Gallery</span>
+            </a>
+
+            <div class="h-px bg-slate-100 my-2"></div>
+
+            <a href="lostfound.html" class="flex items-center gap-3 p-3 rounded-xl bg-blue-50 hover:bg-blue-100 transition-all group/lost border border-blue-100">
+                <div class="bg-blue-600 text-white p-2 rounded-lg shadow-md group-hover/lost:scale-110 transition-transform">
+                    <i data-lucide="search" size="16"></i>
+                </div>
+                <div>
+                    <span class="block text-sm font-black text-blue-900 leading-none">Lost & Found</span>
+                    <span class="text-[10px] text-blue-600 font-bold uppercase tracking-tighter"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+                <button class="bg-[#C5A059] text-white px-6 py-2.5 rounded-full shadow-lg hover:scale-105 transition-all whitespace-nowrap">
+                    APPLY NOW 2026
+                </button>
+            </div>
+
+            <button class="lg:hidden text-white" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 hover:scale-105" style="background-image: url('pic.png');"></div>
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+
+        <div class="relative z-20 text-center px-6 max-w-4xl">
+            <p class="text-[#C5A059] font-black uppercase tracking-[0.5em] mb-4 animate-bounce">Autonomous Institution</p>
+            <h2 class="text-5xl md:text-7xl font-black text-white leading-tight mb-8">
+                Shaping Tomorrow’s <br> 
+                <span class="text-white italic font-light">Engineers & Innovators</span>
+            </h2>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <button class="bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-800 transition-all shadow-xl hover:-translate-y-1">
+                    APPLY NOW
+                </button>
+                <button class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
+                    EXPLORE PROGRAMS
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="departments" class="py-24 bg-slate-100 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <span class="text-[#C5A059] font-bold uppercase tracking-widest text-sm">Detailed Example</span>
+                    <h2 class="text-5xl font-black text-[#003366] mt-2">Departments</h2>
+                    <div class="h-1.5 w-20 bg-[#C5A059] mt-4 rounded-full"></div>
+                </div>
+                
+                <div class="relative w-full md:w-96">
+                    <input type="text" id="deptSearch" placeholder="Search departments (e.g. CSE)..." 
+                        class="w-full px-8 py-4 rounded-2xl border-none shadow-xl focus:ring-2 focus:ring-blue-600 outline-none text-slate-700">
+                    <div class="absolute right-6 top-4 text-slate-400">
+                        <i data-lucide="search"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="deptGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="dept-card group bg-white p-8 rounded-3xl shadow-lg border border-slate-100 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="bg-blue-50 text-blue-600 w-12 h-12 flex items-center justify-center rounded-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors"><i data-lucide="cpu"></i></div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Computer Science & Engineering</h3>
+                    <p class="text-slate-500 text-sm">Focusing on software development, algorithms, and computational theory.</p>
+                </div>
+
+                <div class="dept-card group bg-white p-8 rounded-3xl shadow-lg border border-slate-100 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="bg-indigo-50 text-indigo-600 w-12 h-12 flex items-center justify-center rounded-xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors"><i data-lucide="brain"></i></div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">CSE – AI & ML</h3>
+                    <p class="text-slate-500 text-sm">Specialized track for artificial intelligence and machine learning applications.</p>
+                </div>
+
+                <div class="dept-card group bg-white p-8 rounded-3xl shadow-lg border border-slate-100 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="bg-purple-50 text-purple-600 w-12 h-12 flex items-center justify-center rounded-xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors"><i data-lucide="database"></i></div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Information Science & Engg</h3>
+                    <p class="text-slate-500 text-sm">Management and analysis of complex information systems and data.</p>
+                </div>
+
+                <div class="dept-card group bg-white p-8 rounded-3xl shadow-lg border border-slate-100 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="bg-emerald-50 text-emerald-600 w-12 h-12 flex items-center justify-center rounded-xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors"><i data-lucide="radio"></i></div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Electronics & Communication</h3>
+                    <p class="text-slate-500 text-sm">Expertise in electronic circuits, communication equipment, and VLSI design.</p>
+                </div>
+
+                <div class="dept-card group bg-white p-8 rounded-3xl shadow-lg border border-slate-100 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="bg-orange-50 text-orange-600 w-12 h-12 flex items-center justify-center rounded-xl mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors"><i data-lucide="settings"></i></div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Mechanical Engineering</h3>
+                    <p class="text-slate-500 text-sm">Design, analysis, and manufacturing of mechanical systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="academics" class="py-24 bg-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[#C5A059] font-bold uppercase tracking-widest text-sm">Our Programs</span>
+                <h2 class="text-5xl font-black text-[#003366] mt-2">Explore Academics</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="academic-card p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-2xl">
+                    <div class="bg-blue-50 text-blue-700 w-14 h-14 flex items-center justify-center rounded-2xl mb-6"><i data-lucide="graduation-cap"></i></div>
+                    <h3 class="text-2xl font-black text-[#003366] mb-4">Undergraduate</h3>
+                    <ul class="space-y-3 text-slate-600 font-medium">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>Computer Science & Engineering</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>CSE – AI & ML</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>Information Science</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>Electronics & Communication</li>
+                    </ul>
+                </div>
+                <div class="academic-card p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-2xl">
+                    <div class="bg-yellow-50 text-yellow-700 w-14 h-14 flex items-center justify-center rounded-2xl mb-6"><i data-lucide="briefcase"></i></div>
+                    <h3 class="text-2xl font-black text-[#003366] mb-4">Postgraduate</h3>
+                    <ul class="space-y-3 text-slate-600 font-medium">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>MBA - Management</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>MCA - Applications</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>M.Tech - VLSI Design</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>M.Tech - Data Science</li>
+                    </ul>
+                </div>
+                <div class="academic-card p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-2xl">
+                    <div class="bg-slate-100 text-slate-700 w-14 h-14 flex items-center justify-center rounded-2xl mb-6"><i data-lucide="microscope"></i></div>
+                    <h3 class="text-2xl font-black text-[#003366] mb-4">Research</h3>
+                    <ul class="space-y-3 text-slate-600 font-medium">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>PhD Programmes</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>Research Centers</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>Propel Labs (1-4)</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#C5A059] rounded-full"></div>Innovation & Incubation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="placements" class="py-24 bg-slate-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="placement-content">
+                <p class="text-[#C5A059] font-bold uppercase tracking-widest text-sm">Career Success</p>
+                <h2 class="text-5xl font-black text-white mt-4 mb-8 leading-tight">Strong Industry Connections</h2>
+                <div class="space-y-6 mb-10">
+                    <div class="flex items-center gap-4 font-bold opacity-90">
+                        <i data-lucide="check-circle" class="text-green-400"></i> 100% Placement Assistance
+                    </div>
+                    <div class="flex items-center gap-4 font-bold opacity-90">
+                        <i data-lucide="check-circle" class="text-green-400"></i> 300+ Visiting Companies
+                    </div>
+                </div>
+                <button class="bg-[#C5A059] text-slate-900 px-10 py-4 rounded-xl font-bold shadow-xl hover:scale-105 transition-all">
+                    VIEW PLACEMENTS →
+                </button>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" 
+                     class="rounded-[3rem] border-[12px] border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" 
+                     alt="Students">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Smooth scroll and Nav background toggle logic
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+
+        lucide.createIcons();
+    </script>
+</body>
+</html>

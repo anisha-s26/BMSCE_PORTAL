@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | BMSCE Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom scrollbar for the mobile tab menu */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .tab-btn.active {
+            background-color: #003366 !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm h-20 flex items-center">
+        <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="logo-box bg-[#003366] text-white w-10 h-10 flex items-center justify-center rounded-lg font-bold">B</div>
+                <h1 class="text-xl font-black tracking-tighter text-[#003366]">
+                    BMSCE <span class="text-[#C5A059]">PORTAL</span>
+                </h1>
+            </div>
+            
+            <div class="hidden lg:flex items-center gap-8 font-bold text-[10px] uppercase tracking-[0.2em] text-slate-600">
+                <a href="index.html" class="hover:text-[#003366] transition-colors">Home</a>
+                <a href="about.html" class="text-[#003366] border-b-2 border-[#C5A059]">About</a>
+                <a href="index.html#departments" class="hover:text-[#003366] transition-colors">Departments</a>
+                <a href="index.html#academics" class="hover:text-[#003366] transition-colors">Academics</a>
+                <button class="bg-[#C5A059] text-white px-6 py-2.5 rounded-full shadow-lg hover:scale-105 transition-all">
+                    APPLY NOW
+                </button>
+            </div>
+
+            <button class="lg:hidden text-[#003366]" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white hidden flex-col p-8 space-y-6 text-center font-bold uppercase tracking-widest text-[#003366]">
+        <button class="self-end" onclick="toggleMobileMenu()"><i data-lucide="x"></i></button>
+        <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+        <a href="about.html" onclick="toggleMobileMenu()">About</a>
+        <a href="index.html#departments" onclick="toggleMobileMenu()">Departments</a>
+        <a href="index.html#academics" onclick="toggleMobileMenu()">Academics</a>
+    </div>
+
+    <main class="pt-32 pb-24 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="mb-12 md:mb-16">
+                <span class="text-[#C5A059] font-bold uppercase tracking-widest text-xs md:text-sm">Our Legacy</span>
+                <h2 class="text-4xl md:text-6xl font-black text-[#003366] mt-2">About the Institution</h2>
+                <div class="h-1.5 w-20 bg-[#C5A059] mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                
+                <div class="space-y-8 order-2 lg:order-1">
+                    <div class="space-y-4 text-slate-600 leading-relaxed text-sm md:text-base">
+                        <p class="text-lg md:text-xl font-bold text-[#003366]">
+                            The B.M.S. College of Engineering (BMSCE) was founded in the year 1946 by Sri. B. M. Sreenivasaiah.
+                        </p>
+                        <p>
+                            It is the first private sector initiative in engineering education in India. Over the past 77 years, the institution has produced more than 40,000 engineers contributing globally.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        <div class="p-6 md:p-8 bg-white rounded-3xl shadow-xl border-t-4 border-[#C5A059]">
+                            <div class="w-10 h-10 bg-orange-50 text-[#C5A059] flex items-center justify-center rounded-lg mb-4">
+                                <i data-lucide="eye" size="20"></i>
+                            </div>
+                            <h4 class="font-black text-[#003366] text-lg mb-2">Vision</h4>
+                            <p class="text-xs md:text-sm text-slate-500">Promoting prosperity of mankind by augmenting human resource capital through quality education.</p>
+                        </div>
+                        <div class="p-6 md:p-8 bg-white rounded-3xl shadow-xl border-t-4 border-blue-600">
+                            <div class="w-10 h-10 bg-blue-50 text-blue-600 flex items-center justify-center rounded-lg mb-4">
+                                <i data-lucide="target" size="20"></i>
+                            </div>
+                            <h4 class="font-black text-[#003366] text-lg mb-2">Mission</h4>
+                            <p class="text-xs md:text-sm text-slate-500">Accomplish excellence in Technical Education through Research and Service to society.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden order-1 lg:order-2">
+                    <div class="flex flex-col lg:flex-row">
+                        <div class="bg-slate-900 lg:w-48 p-3 md:p-4 flex flex-row lg:flex-col gap-2 overflow-x-auto no-scrollbar">
+                            <button onclick="showTab('council')" class="tab-btn active text-center lg:text-left px-5 lg:px-4 py-3 rounded-xl transition-all font-bold text-[10px] uppercase tracking-wider whitespace-nowrap">Council</button>
+                            <button onclick="showTab('library')" class="tab-btn text-slate-400 text-center lg:text-left px-5 lg:px-4 py-3 rounded-xl transition-all font-bold text-[10px] uppercase tracking-wider whitespace-nowrap">Library</button>
+                            <button onclick="showTab('campus')" class="tab-btn text-slate-400 text-center lg:text-left px-5 lg:px-4 py-3 rounded-xl transition-all font-bold text-[10px] uppercase tracking-wider whitespace-nowrap">Campus Life</button>
+                        </div>
+                        
+                        <div class="p-6 md:p-10 flex-1 min-h-[350px] md:min-h-[400px]" id="tab-content">
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="about.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        }
+        lucide.createIcons();
+    </script>
+</body>
+</html>

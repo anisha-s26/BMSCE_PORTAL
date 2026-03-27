@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniFind | BMSCE Sustainability Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lostfound.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="UniFindlogo.png" alt="UniFind" class="logo-icon">
+            <span class="logo-separator">|</span>
+
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#items">Browse</a>
+            <button class="btn-primary" onclick="toggleModal()">Report Found Item</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="status-pill">
+            <span class="pulse"></span> Eco-Friendly Campus Utility
+        </div>
+        <h1>Lost it? Let's Find it.</h1>
+        <p>BMSCE's sustainable Lost & Found. Items not claimed within 7 days are donated to local NGOs or recycled to keep our campus green.</p>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for your lost item...">
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-header">
+            <h2 id="items">Active Found Items</h2>
+            <p>Claim your items before the 7-day sustainability timer expires.</p>
+        </div>
+        
+        <div class="items-grid" id="itemsGrid">
+            </div>
+    </main>
+
+    <div class="modal-overlay" id="reportModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Submit Found Item Report</h3>
+                <p>Items enter a 7-day claim window before donation.</p>
+            </div>
+            <form id="reportForm">
+                <div class="form-section">
+                    <label>Item Details</label>
+                    <input type="text" id="itemName" placeholder="Item Name" required>
+                    <textarea id="itemDesc" placeholder="Description" rows="2"></textarea>
+                    <div class="form-row">
+                        <select id="itemCat" required>
+                            <option value="">Category</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Documents">Documents/ID</option>
+                            <option value="Bags">Bags/Wallets</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <input type="text" id="itemLoc" placeholder="Location Found" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label>Student Details (Finder)</label>
+                    <input type="text" id="finderName" placeholder="Full Name" required>
+                    <div class="form-row">
+                        <input type="text" id="univNum" placeholder="USN" required>
+                        <input type="tel" id="phoneNum" placeholder="Phone Number" required>
+                    </div>
+                </div>
+
+                <div class="modal-btns">
+                    <button type="button" class="btn-secondary" onclick="toggleModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Submit Report</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="lostfound.js"></script>
+</body>
+</html>
