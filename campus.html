@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Overview | BMSCE Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfd; }
+        
+        /* Premium Image Cards */
+        .gallery-card {
+            overflow: hidden;
+            border-radius: 2rem;
+            position: relative;
+            background-color: #f1f5f9;
+        }
+        .gallery-card img {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-card:hover img {
+            transform: scale(1.08);
+        }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 51, 102, 0.85), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Stats Card Styling */
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <header class="bg-[#003366] pt-28 pb-40 px-6 text-center text-white relative">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">Our Vibrant Campus</h1>
+            <p class="text-blue-100 text-xl opacity-80 max-w-2xl mx-auto leading-relaxed">
+                Step into a world-class environment designed for engineering excellence and innovation.
+            </p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#fcfcfd] to-transparent"></div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 -mt-20 relative z-30">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="stat-card">
+                <span class="block text-4xl font-black text-[#003366]">15+</span>
+                <span class="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1 block">Acres Campus</span>
+            </div>
+            <div class="stat-card">
+                <span class="block text-4xl font-black text-[#003366]">24/7</span>
+                <span class="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1 block">Digital Library</span>
+            </div>
+            <div class="stat-card">
+                <span class="block text-4xl font-black text-[#003366]">Hi-Tech</span>
+                <span class="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1 block">Research Labs</span>
+            </div>
+            <div class="stat-card">
+                <span class="block text-4xl font-black text-[#003366]">Modern</span>
+                <span class="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1 block">Smart Hostels</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto py-32 px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-black text-[#003366]">Life at BMSCE</h2>
+            <div class="h-1.5 w-28 bg-[#C5A059] mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 auto-rows-[320px]">
+            
+            <div class="md:col-span-2 md:row-span-2 gallery-card shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1000" alt="Main Building">
+                <div class="gallery-overlay">
+                    <div class="text-left">
+                        <p class="text-[#C5A059] font-bold text-sm uppercase mb-2">Iconic Architecture</p>
+                        <h4 class="text-white font-black text-2xl">Main Administrative Block</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-1 gallery-card shadow-xl">
+                <img src="https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=600&auto=format&fit=crop" alt="Central Library">
+                <div class="gallery-overlay">
+                    <span class="text-white font-bold">Main Reading Hall</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-1 bg-white p-10 rounded-[2rem] shadow-xl border border-slate-50 flex flex-col justify-center relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:scale-110 transition-transform">
+                    <i data-lucide="book-open" class="w-16 h-16 text-[#003366]"></i>
+                </div>
+                <p class="text-[#C5A059] text-xs font-bold uppercase tracking-widest mb-2">Featured Facility</p>
+                <h4 class="text-3xl font-black text-[#003366] mb-4 leading-tight">Central Digital Library</h4>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    A tech-enabled hub housing over 100,000 volumes and 24/7 access to international journals.
+                </p>
+            </div>
+
+            <div class="gallery-card shadow-xl">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=600" alt="Labs">
+                <div class="gallery-overlay">
+                    <span class="text-white font-bold">Computing Centers</span>
+                </div>
+            </div>
+
+            <div class="gallery-card shadow-xl">
+                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=600" alt="Sports">
+                <div class="gallery-overlay">
+                    <span class="text-white font-bold">Indoor Sports Arena</span>
+                </div>
+            </div>
+            
+            <div class="md:col-span-4 gallery-card shadow-2xl h-[350px]">
+                <img src="https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&q=80&w=1200" alt="Student Activity Center">
+                <div class="gallery-overlay">
+                    <div class="text-left">
+                        <h4 class="text-white font-black text-3xl">Student Activity Center</h4>
+                        <p class="text-blue-100 opacity-80">The heart of campus social life and cultural events.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="text-center pb-24">
+        <a href="index.html" class="inline-flex items-center gap-3 bg-[#003366] text-white px-12 py-5 rounded-full font-bold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <i data-lucide="arrow-left" class="w-5 h-5"></i> Back to Home
+        </a>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

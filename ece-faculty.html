@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE Faculty | BMSCE Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .faculty-card {
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+        .faculty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.04);
+            border-color: #e2e8f0;
+        }
+        .active-tab {
+            background-color: #004aad;
+            color: white !important;
+        }
+        .interest-tag {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+
+    <nav class="flex items-center justify-between px-12 py-4 border-b border-slate-100 sticky top-0 bg-white/90 backdrop-blur-md z-50">
+        <div class="flex items-center gap-2">
+            <img src="bmslogo.jpeg" alt="BMSCE Logo" class="h-10">
+            <span class="text-xl font-extrabold tracking-tighter text-[#003366]">BMSCE <span class="text-[#C5A059]">PORTAL</span></span>
+        </div>
+        <div class="flex items-center gap-8 text-[13px] font-bold text-slate-500 uppercase tracking-wide">
+            <a href="electronics-communication.html" class="flex items-center gap-1 hover:text-[#003366] transition-colors">
+                <i data-lucide="arrow-left" size="16"></i> BACK TO DEPARTMENT
+            </a>
+        </div>
+    </nav>
+
+    <header class="px-24 py-12 bg-slate-50/50">
+        <div class="flex items-center gap-4 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest rounded-full">Department Staff</span>
+        </div>
+        <h1 class="text-4xl font-extrabold text-[#003366] mb-4">Faculty Profiles</h1>
+        <p class="text-slate-600 max-w-2xl text-[15px] leading-relaxed">
+            Meet the distinguished educators and researchers of the Electronics & Communication Engineering department, dedicated to academic excellence and technological innovation.
+        </p>
+
+        <div class="flex gap-4 mt-10">
+            <a href="electronics-communication.html" class="px-8 py-2.5 rounded-lg text-sm font-bold text-blue-600 border border-slate-200 hover:border-blue-400 transition-all">Vision & Mission</a>
+            <button class="active-tab px-8 py-2.5 rounded-lg text-sm font-bold shadow-lg">Faculty</button>
+            <a href="ece-achievements.html" class="px-8 py-2.5 rounded-lg text-sm font-bold text-blue-600 border border-slate-200 hover:border-blue-400 transition-all">Achievements</a>
+        </div>
+    </header>
+
+    <main class="px-24 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="faculty-card bg-white p-8 rounded-3xl flex flex-col h-full">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-[#003366]">Dr. Seshachalam D</h3>
+                    <p class="text-blue-600 font-bold text-[12px] uppercase tracking-wide">Professor & Vice Principal</p>
+                    <p class="text-slate-400 text-xs mt-1 font-medium italic">ME, Ph.D.</p>
+                </div>
+                <div class="mt-auto">
+                    <h4 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3">Research Interests</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Model Order Reduction</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Power Electronics</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Non-Linear Control</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Battery Management</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-card bg-white p-8 rounded-3xl flex flex-col h-full border-l-4 border-l-[#C5A059]">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-[#003366]">Dr. K.P. Lakshmi</h3>
+                    <p class="text-blue-600 font-bold text-[12px] uppercase tracking-wide">Professor & HOD</p>
+                    <p class="text-slate-400 text-xs mt-1 font-medium italic">Ph.D</p>
+                </div>
+                <div class="mt-auto">
+                    <h4 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3">Research Interests</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Sensing Materials</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Embedded Systems</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Engineering Education</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-card bg-white p-8 rounded-3xl flex flex-col h-full">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-[#003366]">Dr. Akhila S</h3>
+                    <p class="text-blue-600 font-bold text-[12px] uppercase tracking-wide">Professor</p>
+                    <p class="text-slate-400 text-xs mt-1 font-medium italic">Ph. D</p>
+                </div>
+                <div class="mt-auto">
+                    <h4 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3">Research Interests</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Wireless Communication</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Network Security</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Optical Networks</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-card bg-white p-8 rounded-3xl flex flex-col h-full">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-[#003366]">Dr. Beena Ullala Mata B N</h3>
+                    <p class="text-blue-600 font-bold text-[12px] uppercase tracking-wide">Professor</p>
+                    <p class="text-slate-400 text-xs mt-1 font-medium italic">B.E (E&C), M.Tech(BMI), PhD</p>
+                </div>
+                <div class="mt-auto">
+                    <h4 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3">Research Interests</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Signal & Image Processing</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Biomedical Instrumentation</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">IoT Health Care</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-card bg-white p-8 rounded-3xl flex flex-col h-full">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-[#003366]">Dr. Geetishree Mishra</h3>
+                    <p class="text-blue-600 font-bold text-[12px] uppercase tracking-wide">Professor</p>
+                    <p class="text-slate-400 text-xs mt-1 font-medium italic">Ph.D</p>
+                </div>
+                <div class="mt-auto">
+                    <h4 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3">Research Interests</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">AI / Deep Learning</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Embedded System Design</span>
+                        <span class="interest-tag px-3 py-1.5 rounded-lg text-[11px] font-semibold">Real Time OS</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

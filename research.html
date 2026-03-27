@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Innovation | BMSCE Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfd; }
+        
+        .tab-active {
+            background-color: #003366;
+            color: white !important;
+            box-shadow: 0 10px 20px -5px rgba(0, 51, 102, 0.4);
+        }
+
+        .timeline-path {
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #003366, #C5A059, transparent);
+        }
+
+        .hidden-content { display: none; }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <header class="bg-[#003366] pt-24 pb-32 px-6 text-center text-white relative">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-black mb-6 tracking-tight">Research & Innovation</h1>
+            <p class="text-blue-100 text-xl opacity-80 max-w-2xl mx-auto leading-relaxed">
+                Advancing knowledge, innovation, and technology for future leaders.
+            </p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#fcfcfd] to-transparent"></div>
+    </header>
+
+    <section class="max-w-2xl mx-auto px-6 -mt-16 relative z-30">
+        <div class="bg-white/90 backdrop-blur-md p-2 rounded-[2.5rem] shadow-2xl border border-slate-100">
+            <div class="flex items-center justify-around gap-2">
+                <button id="overviewBtn" onclick="switchTab('overview')" class="tab-active w-1/2 px-8 py-4 rounded-3xl font-bold text-sm transition-all duration-300">Overview</button>
+                <button id="researchBtn" onclick="switchTab('research')" class="text-slate-500 w-1/2 px-8 py-4 rounded-3xl font-bold text-sm hover:bg-slate-50 transition-all duration-300">Research Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="overviewContent" class="max-w-6xl mx-auto py-24 px-6">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-16 relative">
+            <div class="hidden md:block md:col-span-1 relative">
+                <div class="timeline-path"></div>
+            </div>
+            <div class="md:col-span-11 space-y-24">
+                <div class="group relative">
+                    <div class="absolute -left-16 top-0 w-12 h-12 bg-[#003366] rounded-full flex items-center justify-center text-white shadow-xl">
+                        <i data-lucide="eye" class="w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-3xl font-black text-[#003366] mb-6 flex items-center gap-4">Vision <span class="h-1 w-20 bg-[#C5A059] rounded-full"></span></h2>
+                    <div class="bg-white p-10 rounded-[2rem] shadow-xl border-l-8 border-[#003366]">
+                        <p class="text-slate-600 text-xl leading-relaxed italic">
+                            "To cultivate a culture of innovation, research excellence, and intellectual property awareness that contributes to academic advancement."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="researchContent" class="max-w-6xl mx-auto py-24 px-6 hidden-content">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black text-[#003366]">Featured Research Project</h2>
+            <div class="h-1 w-24 bg-[#C5A059] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100">
+            <div class="grid md:grid-cols-2">
+                <div class="bg-[#003366] p-12 text-white flex flex-col justify-center">
+                    <span class="text-[#C5A059] font-bold tracking-widest uppercase text-sm mb-4">AI & Robotics</span>
+                    <h3 class="text-3xl font-bold mb-6">Autonomous Drone Navigation System</h3>
+                    <p class="text-blue-100 leading-relaxed mb-8">
+                        This project focuses on developing SLAM-based (Simultaneous Localization and Mapping) algorithms for drones to navigate GPS-denied indoor environments using LiDAR and Computer Vision.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="bg-white/10 p-4 rounded-xl">
+                            <span class="block text-xs uppercase opacity-60">Status</span>
+                            <span class="font-bold text-[#C5A059]">Ongoing</span>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-xl">
+                            <span class="block text-xs uppercase opacity-60">Funding</span>
+                            <span class="font-bold text-[#C5A059]">₹12.5 Lakhs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-12 bg-slate-50">
+                    <h4 class="font-black text-[#003366] text-xl mb-4">Project Impact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="text-green-500 w-6 h-6 shrink-0"></i>
+                            <p class="text-slate-600">Reduced collision rates by 40% in complex industrial warehouses.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="text-green-500 w-6 h-6 shrink-0"></i>
+                            <p class="text-slate-600">Implemented real-time obstacle avoidance using Edge AI processing.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="text-green-500 w-6 h-6 shrink-0"></i>
+                            <p class="text-slate-600">Published in IEEE International Conference on Robotics and Automation.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+
+        function switchTab(tab) {
+            const overviewBtn = document.getElementById('overviewBtn');
+            const researchBtn = document.getElementById('researchBtn');
+            const overviewContent = document.getElementById('overviewContent');
+            const researchContent = document.getElementById('researchContent');
+
+            if (tab === 'overview') {
+                overviewBtn.classList.add('tab-active');
+                overviewBtn.classList.remove('text-slate-500');
+                researchBtn.classList.remove('tab-active');
+                researchBtn.classList.add('text-slate-500');
+                
+                overviewContent.classList.remove('hidden-content');
+                researchContent.classList.add('hidden-content');
+            } else {
+                researchBtn.classList.add('tab-active');
+                researchBtn.classList.remove('text-slate-500');
+                overviewBtn.classList.remove('tab-active');
+                overviewBtn.classList.add('text-slate-500');
+                
+                researchContent.classList.remove('hidden-content');
+                overviewContent.classList.add('hidden-content');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -6,70 +6,183 @@
     <title>Placements | BMSCE Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        /* Custom Timeline styling to match MITK style */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            border: 4px solid white;
+            border-radius: 9999px;
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line { left: 20px; }
+            .timeline-dot { left: 20px; }
+        }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <header class="bg-[#003366] py-20 px-6 text-center text-white">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl font-black mb-4">Placement Excellence</h1>
-            <p class="text-blue-200 text-lg">Empowering our students to lead in global industries through rigorous training and strong corporate partnerships.</p>
+    <header class="bg-[#003366] py-24 px-6 text-center text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h1 class="text-6xl font-black mb-6 tracking-tight">Placement Excellence</h1>
+            <p class="text-blue-100 text-xl opacity-90 leading-relaxed">Empowering our students to lead in global industries through rigorous training and strong corporate partnerships.</p>
         </div>
     </header>
 
-    <section class="py-16 px-6 -mt-10">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="stat-card bg-white p-8 rounded-3xl shadow-xl border-t-4 border-[#C5A059] text-center">
-                <h3 class="text-4xl font-black text-[#003366] mb-2">91%</h3>
+    <section class="max-w-7xl mx-auto px-6 -mt-12 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-3xl shadow-2xl border-t-8 border-[#C5A059] text-center transform hover:-translate-y-2 transition duration-300">
+                <h3 class="text-5xl font-black text-[#003366] mb-2">91%</h3>
                 <p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Placement Success Rate</p>
             </div>
-            <div class="stat-card bg-white p-8 rounded-3xl shadow-xl border-t-4 border-[#C5A059] text-center">
-                <h3 class="text-4xl font-black text-[#003366] mb-2">19 LPA</h3>
+            <div class="bg-white p-10 rounded-3xl shadow-2xl border-t-8 border-[#C5A059] text-center transform hover:-translate-y-2 transition duration-300">
+                <h3 class="text-5xl font-black text-[#003366] mb-2">19 LPA</h3>
                 <p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Highest Package</p>
             </div>
-            <div class="stat-card bg-white p-8 rounded-3xl shadow-xl border-t-4 border-[#C5A059] text-center">
-                <h3 class="text-4xl font-black text-[#003366] mb-2">4.5 LPA</h3>
+            <div class="bg-white p-10 rounded-3xl shadow-2xl border-t-8 border-[#C5A059] text-center transform hover:-translate-y-2 transition duration-300">
+                <h3 class="text-5xl font-black text-[#003366] mb-2">4.5 LPA</h3>
                 <p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Average Package</p>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-6 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-black text-[#003366] mb-12 text-center">The BMSCE Placement Roadmap</h2>
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative" id="roadmapContainer">
+    <section class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-black text-[#003366] mb-4">Placement Distribution</h2>
+            <p class="text-slate-500 mb-12">Sector-wise distribution of offers for the current academic year.</p>
+            <div class="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-slate-100 flex justify-center">
+                <div class="w-full max-w-md h-[400px]">
+                    <canvas id="placementPieChart"></canvas>
                 </div>
+            </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-slate-50">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-black text-[#003366] mb-12 text-center">Trusted by Leading Recruiters</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6" id="recruiterGrid">
+    <section class="py-24 px-6 bg-white overflow-hidden">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-black text-[#003366] mb-20 text-center">The BMSCE Placement Roadmap</h2>
+            
+            <div class="relative">
+                <div class="timeline-line"></div>
+
+                <div class="mb-16 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="timeline-dot bg-[#003366] order-1"></div>
+                    <div class="order-1 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm w-full md:w-5/12 px-6 py-6 transform hover:scale-105 transition duration-300 text-right">
+                        <h4 class="mb-3 font-bold text-[#003366] text-xl">1. Student Registration</h4>
+                        <p class="text-sm leading-snug text-slate-500">Students enroll with the Placement Cell, upload verified CVs, and select preferred tracks.</p>
+                    </div>
                 </div>
+
+                <div class="mb-16 flex justify-between items-center w-full left-timeline">
+                    <div class="order-1 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm w-full md:w-5/12 px-6 py-6 transform hover:scale-105 transition duration-300 text-left">
+                        <h4 class="mb-3 font-bold text-[#003366] text-xl">2. Training & Skill-Up</h4>
+                        <p class="text-sm leading-snug text-slate-500">Comprehensive training covering quantitative aptitude, soft skills, and technical mock interviews.</p>
+                    </div>
+                    <div class="timeline-dot bg-[#C5A059] order-1"></div>
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                </div>
+
+                <div class="mb-16 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="timeline-dot bg-[#003366] order-1"></div>
+                    <div class="order-1 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm w-full md:w-5/12 px-6 py-6 transform hover:scale-105 transition duration-300 text-right">
+                        <h4 class="mb-3 font-bold text-[#003366] text-xl">3. Eligibility Check</h4>
+                        <p class="text-sm leading-snug text-slate-500">Review of academic records (CGPA 6.0+) and backlog status against company criteria.</p>
+                    </div>
+                </div>
+
+                <div class="mb-16 flex justify-between items-center w-full left-timeline">
+                    <div class="order-1 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm w-full md:w-5/12 px-6 py-6 transform hover:scale-105 transition duration-300 text-left">
+                        <h4 class="mb-3 font-bold text-[#003366] text-xl">4. Drive Scheduling</h4>
+                        <p class="text-sm leading-snug text-slate-500">Coordination of campus visits or virtual drives with detailed job descriptions shared in advance.</p>
+                    </div>
+                    <div class="timeline-dot bg-[#C5A059] order-1"></div>
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                </div>
+
+                <div class="mb-16 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="timeline-dot bg-[#003366] order-1"></div>
+                    <div class="order-1 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm w-full md:w-5/12 px-6 py-6 transform hover:scale-105 transition duration-300 text-right">
+                        <h4 class="mb-3 font-bold text-[#003366] text-xl">5. Recruitment Rounds</h4>
+                        <p class="text-sm leading-snug text-slate-500">Final selection involving online assessments, GD, Technical, and HR rounds.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="py-16 px-6 bg-[#003366] text-white">
+    <section class="py-24 px-6 bg-[#003366] text-white">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl font-black mb-8 border-b border-white/20 pb-4">Key Placement Regulations</h2>
-            <ul class="space-y-6">
-                <li class="flex gap-4">
-                    <i data-lucide="shield-check" class="text-[#C5A059]"></i>
-                    <p>Students with confirmed offers will not be allowed to participate in further drives without prior approval.</p>
-                </li>
-                <li class="flex gap-4">
-                    <i data-lucide="award" class="text-[#C5A059]"></i>
-                    <p>Professional conduct and discipline are mandatory throughout all placement activities.</p>
-                </li>
-                <li class="flex gap-4">
-                    <i data-lucide="alert-triangle" class="text-[#C5A059]"></i>
-                    <p>Any violation may result in disqualification from the placement process.</p>
-                </li>
-            </ul>
+            <h2 class="text-4xl font-black mb-12 border-b-2 border-[#C5A059] pb-6 inline-block">Key Placement Regulations</h2>
+            <div class="grid gap-8">
+                <div class="flex gap-6 items-start bg-white/5 p-6 rounded-2xl hover:bg-white/10 transition">
+                    <div class="p-3 bg-[#C5A059]/20 rounded-xl"><i data-lucide="shield-check" class="text-[#C5A059]"></i></div>
+                    <p class="text-lg">Students with confirmed offers will not be allowed to participate in further drives without prior approval.</p>
+                </div>
+                <div class="flex gap-6 items-start bg-white/5 p-6 rounded-2xl hover:bg-white/10 transition">
+                    <div class="p-3 bg-[#C5A059]/20 rounded-xl"><i data-lucide="award" class="text-[#C5A059]"></i></div>
+                    <p class="text-lg">Professional conduct and discipline are mandatory throughout all placement activities.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script src="placement.js"></script>
+    <div class="text-center py-20 bg-slate-50">
+        <a href="index.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-10 py-4 rounded-full font-bold hover:shadow-2xl transition-all">
+            ← BACK TO DASHBOARD
+        </a>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Initialize Pie Chart
+        const ctx = document.getElementById('placementPieChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Core Engineering', 'IT & Software', 'Management', 'Consulting'],
+                datasets: [{
+                    data: [35, 45, 12, 8],
+                    backgroundColor: ['#003366', '#C5A059', '#1e293b', '#475569'],
+                    hoverOffset: 15,
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { font: { weight: 'bold', size: 12 }, padding: 20 }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

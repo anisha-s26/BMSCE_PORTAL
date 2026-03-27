@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Department | BMSCE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+            z-index: 0;
+        }
+        .timeline-dot {
+            position: relative;
+            z-index: 10;
+            background: white;
+            border: 2px solid #3b82f6;
+            color: #3b82f6;
+        }
+        .tab-btn.active {
+            background-color: #004aad;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+        }
+        /* Smooth hover for PO cards */
+        .po-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .po-card:hover {
+            transform: translateY(-3px);
+            background-color: #f0f7ff;
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900">
+
+    <nav class="bg-white shadow-md py-4 px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="bmslogo.jpeg" class="h-8">
+                <a href="index.html" class="text-xl font-black tracking-tighter text-[#003366]">
+                    BMSCE <span class="text-[#C5A059]">PORTAL</span>
+                </a>
+            </div>
+            <a href="index.html" class="text-sm font-bold text-slate-600 hover:text-[#003366] transition-colors flex items-center gap-2">
+                <i data-lucide="arrow-left" size="16"></i> BACK TO HOME
+            </a>
+        </div>
+    </nav>
+
+    <header class="py-12 px-6 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-3xl font-bold text-[#003366] mb-4">Department of Computer Science & Engineering</h1>
+            <p class="text-slate-600 leading-relaxed text-lg">
+                The Department of Computer Science & Engineering at BMSCE was established to produce graduates with strong fundamentals in the CSE domain. The department offers a robust BE program with a focus on cutting-edge research and technological innovations to address the challenges of the digital age.
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-10">
+                <button class="tab-btn active px-6 py-3 rounded-lg border border-slate-200 font-bold transition-all">Vision & Mission</button>
+                <a href="faculty.html" class="tab-btn px-6 py-3 rounded-lg bg-white border border-slate-200 text-[#004aad] font-bold hover:bg-blue-50 transition-all text-center">Faculty</a>
+               
+                <a href="achievements.html" class="tab-btn px-6 py-3 rounded-lg bg-white border border-slate-200 text-[#004aad] font-bold hover:bg-blue-50 transition-all text-center">Achievements</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-16 px-6">
+        <div class="max-w-5xl mx-auto relative">
+            <div class="timeline-line"></div>
+
+            <div class="mb-16 pl-16 relative">
+                <div class="absolute left-[-4px] top-0 timeline-dot w-12 h-12 flex items-center justify-center rounded-full">
+                    <i data-lucide="eye" size="20"></i>
+                </div>
+                <h2 class="text-xl font-bold text-[#004aad] mb-4">Vision</h2>
+                <p class="text-slate-700 leading-relaxed text-lg">
+                    To be a pioneer and internationally recognized institute in Computer Science and Engineering, leading the way in cutting-edge research, technological innovations, and producing highly skilled professionals to address the challenges and opportunities of the digital age.
+                </p>
+            </div>
+
+            <div class="mb-16 pl-16 relative">
+                <div class="absolute left-[-4px] top-0 timeline-dot w-12 h-12 flex items-center justify-center rounded-full">
+                    <i data-lucide="target" size="20"></i>
+                </div>
+                <h2 class="text-xl font-bold text-[#004aad] mb-4">Mission</h2>
+                <ul class="space-y-6">
+                    <li class="flex gap-3 text-slate-700 text-lg">
+                        <span class="text-[#004aad] mt-1"><i data-lucide="chevrons-right" size="20"></i></span>
+                        Providing comprehensive and cutting-edge education in Computer Science and Engineering, equipping students with the knowledge and skills needed to succeed in the rapidly evolving tech industry.
+                    </li>
+                    <li class="flex gap-3 text-slate-700 text-lg">
+                        <span class="text-[#004aad] mt-1"><i data-lucide="chevrons-right" size="20"></i></span>
+                        Fostering collaborative and interdisciplinary culture within the department, encouraging students and faculty to explore innovative solutions through cross-disciplinary projects and partnerships.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-16 pl-16 relative">
+                <div class="absolute left-[-4px] top-0 timeline-dot w-12 h-12 flex items-center justify-center rounded-full">
+                    <i data-lucide="award" size="20"></i>
+                </div>
+                <h2 class="text-xl font-bold text-[#004aad] mb-6">Outcomes & Objectives</h2>
+                
+                <div class="space-y-12">
+                    <div>
+                        <h3 class="text-lg font-black text-slate-800 border-b-2 border-[#004aad] inline-block mb-6">Program Educational Objectives (PEOs):</h3>
+                        <ul class="space-y-4 text-slate-600 font-medium">
+                            <li class="flex gap-2"><span class="font-bold text-[#004aad] shrink-0">PEO1:</span> Develop technical proficiency to solve a wide range of problems in industry, government and other work environments.</li>
+                            <li class="flex gap-2"><span class="font-bold text-[#004aad] shrink-0">PEO2:</span> Adopt quickly to new technologies and environments to progress in research, innovation and entrepreneurship.</li>
+                            <li class="flex gap-2"><span class="font-bold text-[#004aad] shrink-0">PEO3:</span> Possess the ability to collaborate as team members and team leaders to facilitate cutting-edge technical solutions.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-black text-slate-800 border-b-2 border-[#004aad] inline-block mb-6">Programme Outcomes (POs):</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO1</span>
+                                <span class="text-sm font-bold text-slate-700">Engineering Knowledge</span>
+                            </div>
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO2</span>
+                                <span class="text-sm font-bold text-slate-700">Problem Analysis</span>
+                            </div>
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO3</span>
+                                <span class="text-sm font-bold text-slate-700">Design/Development of Solutions</span>
+                            </div>
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO4</span>
+                                <span class="text-sm font-bold text-slate-700">Investigations of Complex Problems</span>
+                            </div>
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO5</span>
+                                <span class="text-sm font-bold text-slate-700">Modern Tool Usage</span>
+                            </div>
+
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO6</span>
+                                <span class="text-sm font-bold text-slate-700">The Engineer and Society</span>
+                            </div>
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO7</span>
+                                <span class="text-sm font-bold text-slate-700">Environment and Sustainability</span>
+                            </div>
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO8</span>
+                                <span class="text-sm font-bold text-slate-700">Ethics</span>
+                            </div>
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO9</span>
+                                <span class="text-sm font-bold text-slate-700">Individual and Team Work</span>
+                            </div>
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO10</span>
+                                <span class="text-sm font-bold text-slate-700">Communication</span>
+                            </div>
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO11</span>
+                                <span class="text-sm font-bold text-slate-700">Project Management and Finance</span>
+                            </div>
+                            <div class="po-card p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
+                                <span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold">PO12</span>
+                                <span class="text-sm font-bold text-slate-700">Life-long Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

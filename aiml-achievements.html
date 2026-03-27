@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements | CSE (AI & ML) | BMSCE Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .achievement-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f1f5f9;
+        }
+        .achievement-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            border-color: #C5A059;
+        }
+        .active-tab {
+            background-color: #004aad;
+            color: white !important;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #C5A059 0%, #E2C27D 100%);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+
+    <nav class="flex items-center justify-between px-12 py-4 border-b border-slate-100 sticky top-0 bg-white/90 backdrop-blur-md z-50">
+        <div class="flex items-center gap-2">
+            <img src="bmslogo.png" alt="BMSCE Logo" class="h-10">
+            <span class="text-xl font-extrabold tracking-tighter text-[#003366]">BMSCE <span class="text-[#C5A059]">PORTAL</span></span>
+        </div>
+        <div class="flex items-center gap-8 text-[13px] font-bold text-slate-500 uppercase tracking-wide">
+            <a href="cse-aiml.html" class="flex items-center gap-1 hover:text-[#003366] transition-colors">
+                <i data-lucide="arrow-left" size="16"></i> BACK TO DEPARTMENT
+            </a>
+        </div>
+    </nav>
+
+    <header class="px-24 py-12 bg-slate-50/50">
+        <div class="flex items-center gap-4 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest rounded-full">Excellence</span>
+        </div>
+        <h1 class="text-4xl font-extrabold text-[#003366] mb-4">Student Achievements</h1>
+        <p class="text-slate-600 max-w-2xl text-[15px] leading-relaxed">
+            Recognizing the outstanding technical accomplishments and competitive spirit of our students in national and international forums.
+        </p>
+
+        <div class="flex gap-4 mt-10">
+            <a href="cse-aiml.html" class="px-8 py-2.5 rounded-lg text-sm font-bold text-blue-600 border border-slate-200 hover:border-blue-400 transition-all">Vision & Mission</a>
+            <a href="faculty.html" class="px-8 py-2.5 rounded-lg text-sm font-bold text-blue-600 border border-slate-200 hover:border-blue-400 transition-all">Faculty</a>
+            <button class="active-tab px-8 py-2.5 rounded-lg text-sm font-bold shadow-lg">Achievements</button>
+        </div>
+    </header>
+
+    <main class="px-24 py-16">
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-[#003366] flex items-center gap-3">
+                <i data-lucide="trophy" class="text-[#C5A059]"></i> Solving for India Hackathon 2023
+            </h2>
+            <p class="text-slate-500 text-sm mt-2">Organized by GeeksforGeeks, Google Cloud, and AMD • April 16, 2023</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="achievement-card bg-white p-8 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-16 h-16 gold-gradient opacity-10 rounded-bl-full"></div>
+                <div class="w-12 h-12 rounded-2xl gold-gradient flex items-center justify-center text-white mb-6 shadow-md">
+                    <span class="font-bold text-lg">01</span>
+                </div>
+                <h3 class="text-xl font-bold text-[#003366] mb-1">Adithya G</h3>
+                <p class="text-blue-600 font-bold text-[11px] uppercase tracking-widest mb-4">1st Place Winner</p>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Secured 1st place in the institute-level hackathon for innovative problem solving.
+                </p>
+            </div>
+
+            <div class="achievement-card bg-white p-8 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-16 h-16 gold-gradient opacity-10 rounded-bl-full"></div>
+                <div class="w-12 h-12 rounded-2xl gold-gradient flex items-center justify-center text-white mb-6 shadow-md">
+                    <span class="font-bold text-lg">01</span>
+                </div>
+                <h3 class="text-xl font-bold text-[#003366] mb-1">Jayanth</h3>
+                <p class="text-blue-600 font-bold text-[11px] uppercase tracking-widest mb-4">1st Place Winner</p>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Recognized for technical excellence in cloud-native application development.
+                </p>
+            </div>
+
+            <div class="achievement-card bg-white p-8 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-16 h-16 gold-gradient opacity-10 rounded-bl-full"></div>
+                <div class="w-12 h-12 rounded-2xl gold-gradient flex items-center justify-center text-white mb-6 shadow-md">
+                    <span class="font-bold text-lg">01</span>
+                </div>
+                <h3 class="text-xl font-bold text-[#003366] mb-1">Amal Srivastava</h3>
+                <p class="text-blue-600 font-bold text-[11px] uppercase tracking-widest mb-4">1st Place Winner</p>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Exhibited superior AI/ML implementation skills at the institute level.
+                </p>
+            </div>
+
+            <div class="achievement-card bg-white p-8 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-16 h-16 gold-gradient opacity-10 rounded-bl-full"></div>
+                <div class="w-12 h-12 rounded-2xl gold-gradient flex items-center justify-center text-white mb-6 shadow-md">
+                    <span class="font-bold text-lg">01</span>
+                </div>
+                <h3 class="text-xl font-bold text-[#003366] mb-1">Ankith L</h3>
+                <p class="text-blue-600 font-bold text-[11px] uppercase tracking-widest mb-4">1st Place Winner</p>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Successfully developed impactful solutions using AMD and Google Cloud tools.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="mt-16 p-8 bg-[#003366] rounded-3xl text-white flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+                <h4 class="text-xl font-bold mb-2">About Solving for India Hackathon</h4>
+                <p class="text-blue-100/70 text-sm max-w-xl">
+                    A nationwide initiative to build impactful solutions for local challenges. Our students leveraged AMD hardware and Google Cloud infrastructure to win 1st place at the institute level.
+                </p>
+            </div>
+            <div class="flex gap-4">
+                <div class="text-center px-6">
+                    <div class="text-3xl font-black text-[#C5A059]">2023</div>
+                    <div class="text-[10px] uppercase font-bold tracking-widest opacity-60">Year</div>
+                </div>
+                <div class="w-[1px] h-12 bg-white/10"></div>
+                <div class="text-center px-6">
+                    <div class="text-3xl font-black text-[#C5A059]">01st</div>
+                    <div class="text-[10px] uppercase font-bold tracking-widest opacity-60">Rank</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
